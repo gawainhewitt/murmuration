@@ -1,0 +1,23 @@
+{
+  "name": "murmuration",
+  "version": "1.0.0",
+  "description": "Online elements of the murmuration installation at Great Ormond Street",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist/ && mkdir ./dist && cp ./index.html ./dist/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gawainhewitt/murmuration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gawainhewitt/murmuration/issues"
+  },
+  "homepage": "https://github.com/gawainhewitt/murmuration#readme",
+  "dependencies": {
+    "tone": "^14.7.77"
+  }
+}
