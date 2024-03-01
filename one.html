@@ -1,11 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>French Horn</title>
+  <link rel="stylesheet" href="css/one.css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.69/Tone.js'></script>  <!-- bring in the Tone.js library - google search for tone.js cdn-->
 </head>
+
 <body>
-    instrument 1
+
+  <div id="loadscreen">
+      <h1>loading...<br>loading...<br>loading...<br>loading...<br>loading...<br>loading...<br>loading...<br>loading...<br>loading...<br>loading...<br>loading...<br>loading...<br>loading...</h1>
+  </div>
+  <div id="welcomescreen">
+    <br>
+    <br>
+    <br>
+    <br>
+    <p id="welcometext">French Horn.<br> You can play this using the QWERTYUIO keys <br>on your keyboard or by touching or clicking the screen</p>
+    <p>if on iPhone you will need to <br>
+      switch silent mode off on the <br>
+      side of your phone</p>
+    <p id="clicktostart"> Click or touch <br>screen to start</p>
+  </div>
+
+  <div id="container">
+
+    <div id="selections">
+      <div id="select1">
+        <div class="keymenu" style="width: 100%;">
+          <select id="selectKey">
+            <option value="0">Key</option>
+            <option value="1">Key: C</option>
+            <option value="2">Key: C#/Db</option>
+            <option value="3">Key: D</option>
+            <option value="4">Key: D#/Eb</option>
+            <option value="5">Key: E</option>
+            <option value="6">Key: F</option>
+            <option value="7">Key: F#/Gb</option>
+            <option value="8">Key: G</option>
+            <option value="9">Key: G#/Ab</option>
+            <option value="10">Key: A</option>
+            <option value="11">Key: A#/Bb</option>
+            <option value="12">Key: B</option>
+          </select>
+        </div>
+      </div>
+
+
+
+      <div id="select2">
+        <div class="scalemenu" style="width: 100%;">
+          <select id="selectScale">
+            <option value="0">Scale</option>
+            <option value="1">Pentatonic</option>
+            <option value="2">Major</option>
+            <option value="3">Minor</option>
+            <option value="4">Major Blues</option>
+            <option value="5">Minor Blues</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="select3">
+        <div class="octavemenu" style="width: 100%;">
+          <select id="selectScale">
+            <option value="0">Octave</option>
+            <option value="1">0</option>
+            <option value="2">1</option>
+            <option value="3">2</option>
+            <option value="4">3</option>
+          </select>
+        </div>
+      </div>
+
+      <span class="clear"></span> <!-- this keeps the above elements within the parent div-->
+    </div>
+
+
+
+    <div id="image0">
+      <img src="images/image0.png" alt="One" width="1250" height="1250" id="i0">
+    </div>
+    <div id="image1">
+      <img src="images/image1.png" alt="One" width="1250" height="1250" id="i1">
+    </div>
+    <div id="image2">
+      <img src="images/image2.png" alt="One" width="1250" height="1250" id="i2">
+    </div>
+    <div id="image3">
+      <img src="images/image3.png" alt="One" width="1250" height="1250" id="i3">
+    </div>
+    <div id="image4">
+      <img src="images/image4.png" alt="One" width="1250" height="1250" id="i4">
+    </div>
+    <div id="image5">
+      <img src="images/image5.png" alt="One" width="1250" height="1250" id="i5">
+    </div>
+    <div id="image6">
+      <img src="images/image6.png" alt="One" width="1250" height="1250" id="i6">
+    </div>
+    <div id="image7">
+      <img src="images/image7.png" alt="One" width="1250" height="1250" id="i7">
+    </div>
+    <div id="image8">
+      <img src="images/image8.png" alt="One" width="1250" height="1250" id="i8">
+    </div>
+    <span class="clear"></span> <!-- this keeps the above elements within the parent div-->
+  </div>
+
+  <script src="js/one.js"></script>
+
 </body>
 </html>

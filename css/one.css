@@ -1,0 +1,301 @@
+:root {
+  --black: rgb(0, 0, 0);
+  --orange: rgb(230, 159, 0);
+  --skyblue: rgb(86, 180, 233);
+  --bluishgreen: rgb(0, 158, 115);
+  --yellow: rgb(240, 228, 66);
+  --blue: rgb(0, 114, 178);
+  --vermillion: rgb(213, 94, 0);
+  --reddishpurple: rgb(204, 121, 167);
+
+  --backgroundcolour: var(--skyblue);
+  
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bluishgreen);
+}
+
+@media (min-aspect-ratio: 3/2) {
+#container{
+    width: 48%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    }
+}
+
+@media (min-aspect-ratio: 16/17) and (max-aspect-ratio: 3/2) {
+    #container{
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    }
+
+@media (max-aspect-ratio: 16/17) {
+    #container{
+        width: 102%; /* set to 102% to hack around an issue with space to the right in portrait mode*/
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    }
+
+#loadscreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backgroundcolour);
+  z-index: 3;
+  opacity: 0.8;
+}
+
+#welcomescreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--vermillion);
+  z-index: 3;
+  opacity: 0.9;
+  visibility: hidden;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20em, 0;
+  text-align: center;
+  font-size: 5em;
+  color: black;
+}
+
+#welcometext {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20em, 0;
+  text-align: center;
+  font-size: 2em;
+  color: black;
+}
+
+#clicktostart {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20em, 0;
+  text-align: center;
+  font-size: 3em;
+  color: black;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20em, 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block; /* this fixes spacce beneath the images within the divs */
+}
+
+span.clear { clear: left; display: block; } /* clears the float thus ensuring the images remain within the container div */
+
+
+#image0 {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color: var(--yellow);
+}
+#image1 {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color: var(--orange);
+}
+
+#image2 {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color:  var(--yellow);
+}
+
+#image3 {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color: var(--orange);
+}
+
+#image4 {
+    margin: 10;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color:  var(--yellow);
+}
+
+#image5 {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color: var(--orange);
+}
+
+#image6 {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color:  var(--yellow);
+}
+
+#image7 {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color: var(--orange);
+}
+
+#image8 {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 32.6%;
+    float: left;
+    text-align: center;
+    background-color:  var(--yellow);
+}
+
+div.img img {
+    display: inline;
+    margin: 5px;
+}
+
+
+/* The following styles the select boxes*/
+
+
+#select1 {
+
+    float: left;
+    width: 32.6%;
+}
+
+#select2 {
+
+    float: left;
+    width: 32.6%;
+}
+
+#select3 {
+
+    float: left;
+    width: 32.6%;
+}
+
+ /* The container must be positioned relative: */
+ .keymenu {
+    position: relative;
+    font-family: Arial;
+  }
+
+ .scalemenu {
+    position: relative;
+    font-family: Arial;
+  }
+
+  .octavemenu {
+    position: relative;
+    font-family: Arial;
+  }
+
+  .keymenu select {
+    display: none; /*hide original SELECT element: */
+  }
+
+  .scalemenu select {
+    display: none; /*hide original SELECT element: */
+  }
+
+  .octavemenu select {
+    display: none; /*hide original SELECT element: */
+  }
+
+  .select-selected {
+    background-color: var(--vermillion));
+  }
+
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: black transparent transparent transparent;
+  }
+
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent black transparent;
+    top: 7px;
+  }
+
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: black;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: var(--blue);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
