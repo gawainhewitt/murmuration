@@ -4,7 +4,7 @@
   "description": "Online elements of the murmuration installation at Great Ormond Street",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./dist/ && mkdir ./dist && cp ./index.html ./dist/index.html && cp ./main.css ./dist/main.css && cp ./one.html ./dist/one.html && cp ./many.html ./dist/many.html && cp -avr ./images/ ./dist/"
+    "build": "rm -rf ./dist/ && mkdir ./dist && cp ./index.html ./dist/index.html && cp -avr ./sounds/ ./dist/ && cp -avr ./js/ ./dist/ && cp -avr ./css/ ./dist/ && cp ./one.html ./dist/one.html && cp ./many.html ./dist/many.html && cp -avr ./images/ ./dist/"
   },
   "repository": {
     "type": "git",

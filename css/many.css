@@ -1,0 +1,89 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(170, 174, 182);
+}
+
+#mycanvas {  /* dynamically change the p5 canvas to always fill the parent div width.  The width of the canvas from p5 is dynamically created, meaning that it gets applied at element level. There is no way of overriding that with specificity, so you need to raise a declaration as !important: */
+  float: left;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+ #p5parent { /* then you have to place the canvas within a parent div which has the correct attributes to dynamically create the right dimensions */
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-aspect-ratio: 3/2) {
+  .containerclass{
+    position: relative;
+    width: 48%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 5px solid red; */
+  }
+}
+
+@media (min-aspect-ratio: 16/17) and (max-aspect-ratio: 3/2) {
+  .containerclass{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 5px solid blue; */
+  }
+}
+
+@media (max-aspect-ratio: 16/17) {
+  .containerclass{
+    width: 100%; /* set to 102% to hack around an issue with space to the right in portrait mode*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 5px solid yellow; */
+    }
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20em, 0;
+  text-align: center;
+  font-size: 5em;
+  color: white;
+}
+
+#welcometext {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20em, 0;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
+
+#clicktostart {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20em, 0;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20em, 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block; /* this fixes space beneath the images within the divs */
+}
+
+span.clear { clear: left; display: block; } /* clears the float thus ensuring the images remain within the container div */
