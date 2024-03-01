@@ -8,6 +8,14 @@
 
 //save to bring up a clearer dialogue
 
+const orange = "rgb(230, 159, 0)"
+const skyBlue = "rgb(86, 180, 233)"
+const blueishGreen = "rgb(0, 158, 115)"
+const yellow = "rgb(240, 228, 66)" // main background colour
+const blue = "rgb(0, 114, 178)"
+const vermilion = "rgb(213, 94, 0)"
+const reddishPurple = "rgb(204, 121, 167)"
+
 let theVolume = -24;
 let seqSteps = 8;
 let seqRows = 8;
@@ -122,19 +130,19 @@ function setup() {  // setup p5
     x: width/10,
     y: height/10*0.8,
     text: '-',
-    colour: 'rgba(255, 255, 255, 0.9)'
+    colour: yellow
   });
   faster = ({
     x: width/10*9,
     y: height/10*0.8,
     text: '+',
-    colour: 'rgba(255, 255, 255, 0.9)'
+    colour: yellow
   });
   save = ({
     x: width/2,
     y: height/10*0.75,
     text: 'Save',
-    colour: 'rgba(255, 255, 255, 0.9)',
+    colour: blue,
     status: false
   });
 
@@ -151,7 +159,7 @@ function setup() {  // setup p5
 }
 
 function welcomeScreen() {
-  background(150); // background is grey (remember 5 is maximum because of the setup of colorMode)
+  background(blueishGreen); // background is grey (remember 5 is maximum because of the setup of colorMode)
   textSize(cnvDimension/10);
   textAlign(CENTER, CENTER);
   text("Murmuration", width/2, height/10 * 2);
@@ -185,21 +193,21 @@ function createButtonPositions() {
 function drawSynth(step) { // instead of using the draw function at 60 frames a second we will call this function when something changes
 
   if(save.status){
-    background(156, 156, 184);
+    background(vermilion);
     inp.show();
     inp.value(saveText);
-    background(150); // background is grey (remember 5 is maximum because of the setup of colorMode)
+    background(vermilion); // background is grey (remember 5 is maximum because of the setup of colorMode)
     textSize(cnvDimension/20);
     textAlign(CENTER, CENTER);
     text("Copy and paste this link to share your music", width/10, height/10, (width/10) * 8, (height/10) * 3);
-    fill(99, 245, 66);
+    fill(yellow);
     ellipse(width/2, height/5*4, radius*2);
     fill(0);
     text("ok", width/2, height/5*4);
   }else{
-    // background(245, 218, 66);
+    background(blueishGreen);
     imageMode(CORNER);
-    image(sky, 0, 0, width, height);
+    // image(sky, 0, 0, width, height);
     imageMode(CENTER);
 
     for(let i = 0; i < seqRows; i++){
@@ -311,12 +319,12 @@ function handleClick(e){
         }
         setSpeed(Tone.Transport.bpm.value);
         console.log(`bpm ${Math.round(Tone.Transport.bpm.value)}`);
-        slower.colour = 'rgba(255, 0, 255, 0.9)'
+        slower.colour = vermilion;
         bpmShow = true;
         drawSynth();
         setTimeout(() => {
           bpmShow = false;
-          slower.colour = 'rgba(255, 255, 255, 0.9)';
+          slower.colour = yellow;
           drawSynth();
         }, 1000);
       }
@@ -328,12 +336,12 @@ function handleClick(e){
         }
         setSpeed(Tone.Transport.bpm.value);
         console.log(`bpm ${Math.round(Tone.Transport.bpm.value)}`);
-        faster.colour = 'rgba(255, 0, 255, 0.9)'
+        faster.colour = vermilion
         bpmShow = true;
         drawSynth();
         setTimeout(() => {
           bpmShow = false;
-          faster.colour = 'rgba(255, 255, 255, 0.9)';
+          faster.colour = yellow;
           drawSynth();
         }, 1000);
       }
@@ -341,11 +349,11 @@ function handleClick(e){
       if(isMouseInsideText(save.text, save.x, save.y)){
         console.log("save");
         save.status = true;
-        save.colour = 'rgba(255, 0, 255, 0.9)'
+        save.colour = vermilion
         saveSeq();
         drawSynth();
         setTimeout(() => {
-          save.colour = 'rgba(255, 255, 255, 0.9)';
+          save.colour = yellow;
           drawSynth();
         }, 1000);
       }
@@ -471,7 +479,7 @@ if(isNaN(savedTempo) === false){
   //drawSynth();
   setTimeout(() => {
     bpmShow = false;
-    faster.colour = 'rgba(255, 255, 255, 0.9)';
+    faster.colour = yellow;
     drawSynth();
   }, 1000);
 
