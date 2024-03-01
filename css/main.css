@@ -8,7 +8,7 @@
     --vermillion: rgb(213, 94, 0);
     --reddishpurple: rgb(204, 121, 167);
   
-    --backgroundcolour: var(--bluishgreen);
+    --backgroundcolour: var(--skyblue);
     
   }
 
@@ -37,7 +37,7 @@ background-color: var(--backgroundcolour);
     text-align: center;
     margin: auto;
     font-family: monospace;
-    color: var(--orange);
+    color: var(--vermillion);
 }
 
  /* Extra small devices (phones, 600px and down) */
