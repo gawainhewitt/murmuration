@@ -1,0 +1,47 @@
+:root {
+    --black: rgb(0, 0, 0);
+    --orange: rgb(230, 159, 0);
+    --skyblue: rgb(86, 180, 233);
+    --bluishgreen: rgb(0, 158, 115);
+    --yellow: rgb(240, 228, 66);
+    --blue: rgb(0, 114, 178);
+    --vermillion: rgb(213, 94, 0);
+    --reddishpurple: rgb(204, 121, 167);
+  
+    --backgroundcolour: var(--bluishgreen);
+    
+  }
+
+.parent {
+height: 100vh;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+background-color: var(--backgroundcolour);
+}
+
+#title { 
+    grid-area: 1 / 2 / 2 / 5; 
+    text-align: center;
+    margin: auto;
+    font-family: monospace;
+    font-size: 8em;
+    color: var(--orange);
+}
+
+#link1 { grid-area: 2 / 2 / 4 / 3; }
+#link2 { grid-area: 2 / 4 / 4 / 5; }
+
+#credits { 
+    grid-area: 5 / 2 / 6 / 5; 
+    text-align: center;
+    font-family: monospace;
+
+}
+
+.links {
+    width: 30vh;
+    height: 30vh;
+}
