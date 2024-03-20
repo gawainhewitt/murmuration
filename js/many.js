@@ -162,11 +162,11 @@ function welcomeScreen() {
   background(blueishGreen); // background is grey (remember 5 is maximum because of the setup of colorMode)
   textSize(cnvDimension/10);
   textAlign(CENTER, CENTER);
-  text("Murmuration", width/2, height/10 * 2);
+  text("Murmuration", width/2, height/10 * 1.5);
   textSize(cnvDimension/20);
-  text( "Bird Sequencer", width/10, height/10, (width/10) * 8, (height/10) * 8);
-  text( "Touch screen or click mouse to start", width/2, height/10 * 7);
-  text( "(...on iPhone side switch ON)", width/2, height/10 * 8);
+  text( "Click on a bird to activate it. Click on the same bird again to deactivate it. The + speeds up time and pitch while the - slows it down. Click save to create a new web address with your work saved in it", width/10, height/14, (width/10) * 8, (height/10) * 8);
+  text( "Touch screen or click mouse to start", width/2, height/10 * 8);
+  text( "(...on iPhone side switch ON)", width/2, height/10 * 9);
 }
 
 function createButtonPositions() {
