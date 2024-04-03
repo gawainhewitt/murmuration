@@ -451,18 +451,37 @@ function handleMenu(menu, index) { // function to handle the menu selections and
 
 const sampler = new Tone.Sampler({
 	urls: {
-		B2: "horn-tone-b2.mp3",
-    C3: "horn-tone-c3.mp3",
-    E3: "horn-tone-e3.mp3",
-    G3: "horn-tone-g3.mp3",
-    A3: "horn-tone-a3.mp3",
-    C4: "horn-tone-c4.mp3"
+		A2: "355893__mtg__violin-a3.mp3",
+    C3: "356134__mtg__violin-c4.mp3",
+    D3: "356048__mtg__violin-d4.mp3",
+    E3: "355976__mtg__violin-e4.mp3",
+    F3: "356107__mtg__violin-f4.mp3",
+    G3: "356045__mtg__violin-g4.mp3",
+    A3: "356075__mtg__violin-a4.mp3",
+    B3: "355998__mtg__violin-b4.mp3"
+
+
 	},
 	baseUrl: "/sounds/",
 	onload: () => {
     hideLoadScreen();
   }
 })
+
+// const sampler = new Tone.Sampler({
+// 	urls: {
+// 		B2: "horn-tone-b2.mp3",
+//     C3: "horn-tone-c3.mp3",
+//     E3: "horn-tone-e3.mp3",
+//     G3: "horn-tone-g3.mp3",
+//     A3: "horn-tone-a3.mp3",
+//     C4: "horn-tone-c4.mp3"
+// 	},
+// 	baseUrl: "/sounds/",
+// 	onload: () => {
+//     hideLoadScreen();
+//   }
+// })
 
 const reverb = new Tone.Reverb({
   decay: 3,
