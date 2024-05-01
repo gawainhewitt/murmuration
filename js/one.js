@@ -451,22 +451,33 @@ function handleMenu(menu, index) { // function to handle the menu selections and
 
 const sampler = new Tone.Sampler({
 	urls: {
-		A2: "355893__mtg__violin-a3.mp3",
-    C3: "356134__mtg__violin-c4.mp3",
-    D3: "356048__mtg__violin-d4.mp3",
-    E3: "355976__mtg__violin-e4.mp3",
-    F3: "356107__mtg__violin-f4.mp3",
-    G3: "356045__mtg__violin-g4.mp3",
-    A3: "356075__mtg__violin-a4.mp3",
-    B3: "355998__mtg__violin-b4.mp3"
-
-
+		B3: "bassoon_b3.mp3",
 	},
 	baseUrl: "/sounds/",
 	onload: () => {
     hideLoadScreen();
   }
 })
+
+
+// const sampler = new Tone.Sampler({
+// 	urls: {
+// 		A2: "355893__mtg__violin-a3.mp3",
+//     C3: "356134__mtg__violin-c4.mp3",
+//     D3: "356048__mtg__violin-d4.mp3",
+//     E3: "355976__mtg__violin-e4.mp3",
+//     F3: "356107__mtg__violin-f4.mp3",
+//     G3: "356045__mtg__violin-g4.mp3",
+//     A3: "356075__mtg__violin-a4.mp3",
+//     B3: "355998__mtg__violin-b4.mp3"
+
+
+// 	},
+// 	baseUrl: "/sounds/",
+// 	onload: () => {
+//     hideLoadScreen();
+//   }
+// })
 
 // const sampler = new Tone.Sampler({
 // 	urls: {
